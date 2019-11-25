@@ -9,11 +9,13 @@ package jp.ac.uryukyu.ie.e195712;
  *  boolean dead; //生死状態。true=死亡。
  */
 public class LivingThing {
-    String name;
-    int hitPoint;
-    int attack;
-    boolean dead;
+    private String name;
+    private int hitPoint;
+    private int attack;
+    private boolean dead;
 
+    public void setHitPoint( int hitPoint ) {this.hitPoint = hitPoint;}
+    public int getHitPoint() { return hitPoint; }
 
     /**
      * コンストラクタ。名前、最大HP、攻撃力を指定する。
@@ -28,9 +30,12 @@ public class LivingThing {
         dead = false;
     }
 
+    //boolean型のgetterはgetではなくisがつく
     public boolean isDead() { return dead; }
+    public void setDead( boolean dead ) {this.dead =dead;}
 
     public String getName() { return name; }
+
 
 
     /**
